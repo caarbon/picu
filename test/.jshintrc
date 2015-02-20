@@ -1,0 +1,26 @@
+{
+  "boss": true,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": false,
+  "eqnull": true,
+  "freeze": true,
+  "latedef": "nofunc",
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "nonew": true,
+  "quotmark": "single",
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "node": true,
+  "browser": false,
+  "loopfunc": true,
+  "globals": {
+    "config": true,
+    "it": true,
+    "before": true,
+    "describe": true
+  }
+}
