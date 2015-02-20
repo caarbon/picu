@@ -1,0 +1,6 @@
+{
+  "author": "Tim Marshall <mars@caarbon.com>",
+  "name": "function-utils",
+  "description": "Caarbon function utilities",
+  "main": "utils"
+}
