@@ -1,5 +1,5 @@
 var assert = require('assert');
-var utils = require('string-utils');
+var utils = require('../').string;
 
 describe('String Utils module', function() {
   describe('.pluralize(num, string)', function() {

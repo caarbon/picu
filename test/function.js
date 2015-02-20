@@ -1,5 +1,5 @@
 var assert = require('assert');
-var utils = require('function-utils');
+var utils = require('../').function;
 
 describe('Function Utils module', function() {
   describe('.curry(fn, [args, ])', function() {

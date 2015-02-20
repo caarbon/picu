@@ -1,5 +1,5 @@
 var assert = require('assert');
-var utils = require('array-utils');
+var utils = require('../').array;
 
 describe('Array Utils module', function() {
   describe('.inbetween(arr, thing)', function() {
