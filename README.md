@@ -1,5 +1,7 @@
 # PICU
 
+[![Circle CI](https://circleci.com/gh/caarbon/picu/tree/master.svg?style=svg)](https://circleci.com/gh/caarbon/picu/tree/master)
+
 PICU is Caarbon's [Node] Utilities
 
 Utilities will be added as they are needed.
