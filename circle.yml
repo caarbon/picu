@@ -1,0 +1,12 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  node:
+    version: 0.10.31
+
+dependencies:
+  pre:
+    - docker build -t caarbon/director:$CIRCLE_SHA1 .
+  override:
+    - npm install grunt-cli -g
+    - npm install
