@@ -1,4 +1,4 @@
-# PICU [![Circle CI](https://circleci.com/gh/caarbon/picu/tree/master.svg?style=svg&circle-token=3d73402862b0cf7b5b7444721e33ca78ee5f5001)](https://circleci.com/gh/caarbon/picu/tree/master)
+# PICU [![Circle CI](https://circleci.com/gh/caarbon/picu.svg?style=svg)](https://circleci.com/gh/caarbon/picu)
 
 PICU is Caarbon's [Node] Utilities
 
