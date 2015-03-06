@@ -4,6 +4,8 @@ PICU is Caarbon's [Node] Utilities
 
 Utilities will be added as they are needed.
 
+![](./readme_images/picu.gif)
+
 ## NPM
 
 ```
