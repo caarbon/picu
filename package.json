@@ -1,7 +1,7 @@
 {
   "name": "picu",
   "description": "PICU is Caarbon's [Node] Utilities",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": "./lib",
   "scripts": {
     "test": "grunt lint && mocha -R dot -t 20000 -b --recursive ./test"
