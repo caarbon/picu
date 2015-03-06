@@ -13,7 +13,7 @@ npm install picu --save
 ## Arrays
 
 ```js
-var stringUtils = require('picu').string;
+var arrayUtils = require('picu').array;
 ```
 
 ### .inbetween
@@ -22,7 +22,7 @@ Injects a new value inbetween each cell
 
 ```js
 var a = [1, 2, 3];
-var b = stringUtils.inbetween(a, 'x');
+var b = arrayUtils.inbetween(a, 'x');
 // b -> [1, 'x', 2, 'x', 3]
 ```
 
@@ -32,7 +32,7 @@ Shuffles an array
 
 ```js
 var a = [1, 2, 3];
-var b = stringUtils.shuffle(a);
+var b = arrayUtils.shuffle(a);
 // b -> [3, 1, 2]
 ```
 
@@ -116,7 +116,7 @@ stringUtils.pluralize(2, 'There were {#} dog{s}'); // 'There were 2 dogs'
 Simply capitalizes the first letter of a string
 
 ```js
-stingUtils.capitalize('warren'); // 'Warren'
+stringUtils.capitalize('warren'); // 'Warren'
 ```
 
 ### .pad
@@ -124,8 +124,8 @@ stingUtils.capitalize('warren'); // 'Warren'
 Pads (on the right) a string
 
 ```js
-stingUtils.pad('hello', 10); // 'hello     '
-stingUtils.pad('hello', 10, '~'); // 'hello~~~~~'
+stringUtils.pad('hello', 10); // 'hello     '
+stringUtils.pad('hello', 10, '~'); // 'hello~~~~~'
 ```
 
 ### .replace
@@ -133,19 +133,19 @@ stingUtils.pad('hello', 10, '~'); // 'hello~~~~~'
 Replaces text in a template with passed values
 
 ```js
-stingUtils.replace('{{valet}} will {{action}} your car', {
+stringUtils.replace('{{valet}} will {{action}} your car', {
   valet: 'Tom M.'
   action: 'pick up'
 });
 // -> 'Tom M. will pick up your car'
 
-stingUtils.replace('~valet~ will ~action~ your car', {
+stringUtils.replace('~valet~ will ~action~ your car', {
   valet: 'Tom M.',
   action: 'pick up'
 }, /~([^~]+)~/g);
 // -> 'Tom M. will pick up your car'
 
-stingUtils.replace('You are assigned to pick up {{ownership(name)}} car', {
+stringUtils.replace('You are assigned to pick up {{ownership(name)}} car', {
   name: 'Jess',
   ownership: function(name) {
     return name.substr(-1) === 's' ? name + '\'' : name + '\'s';
@@ -159,7 +159,7 @@ stingUtils.replace('You are assigned to pick up {{ownership(name)}} car', {
 Converts a hex color value to an array of [R, G, B]
 
 ```js
-stingUtils.hexToRgb('ae76fa'); // [ 174, 118, 250 ]
+stringUtils.hexToRgb('ae76fa'); // [ 174, 118, 250 ]
 ```
 
 ### .ensureHexColor
@@ -167,10 +167,19 @@ stingUtils.hexToRgb('ae76fa'); // [ 174, 118, 250 ]
 Ensures a color string is a 6 character hash color
 
 ```js
-stingUtils.ensureHexColor('#f0f0f0'); // -> '#f0f0f0'
-stingUtils.ensureHexColor('f0f0f0'); // -> '#f0f0f0'
-stingUtils.ensureHexColor('#f0f0f0', true); // -> 'f0f0f0'
-stingUtils.ensureHexColor('ba7'); // -> '#bbaa77'
+stringUtils.ensureHexColor('#f0f0f0'); // -> '#f0f0f0'
+stringUtils.ensureHexColor('f0f0f0'); // -> '#f0f0f0'
+stringUtils.ensureHexColor('#f0f0f0', true); // -> 'f0f0f0'
+stringUtils.ensureHexColor('ba7'); // -> '#bbaa77'
+```
+
+### .hexToInt
+
+Converts a hex string to an integer
+
+```js
+stringUtils.hexToInt('#f09fa6'); // -> 15769510
+stringUtils.hexToInt('#f03'); // -> 16711731
 ```
 
 ### .escapeRegExp
@@ -178,7 +187,21 @@ stingUtils.ensureHexColor('ba7'); // -> '#bbaa77'
 Escapes a string so it can be used in new RegExp(str)
 
 ```js
-var prepared = stingUtils.escapeRegExp('+2 people. +3 cars');
+var prepared = stringUtils.escapeRegExp('+2 people. +3 cars');
 // prepared = '\\+2 people\\. \\+3 cars'
 var expr = new RegExp(prepared);
+```
+
+## Numbers
+
+```js
+var numberUtils = require('picu').number;
+```
+
+### .intToHex
+
+Converts a integer to a hex string
+
+```js
+numberUtils.intToHex(15769510); // -> #f09fa6
 ```
