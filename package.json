@@ -1,7 +1,8 @@
 {
   "name": "picu",
-  "description": "PICU is Caarbon's [Node] Utilities",
-  "version": "0.1.0",
+  "description": "PICU is Carbon's [Node] Utilities",
+  "author": "Tim Marshall <timothyjmarshall@gmail.com>",
+  "version": "0.1.1",
   "main": "./lib",
   "scripts": {
     "test": "grunt lint && mocha -R dot -t 20000 -b --recursive ./test"
@@ -16,5 +17,11 @@
     "matchdep": "0.3.0",
     "mocha": "2.1.0"
   },
-  "repository": "git://github.com/caarbon/director"
+  "homepage": "https://github.com/caarbon/picu",
+  "repository": "git://github.com/caarbon/picu",
+  "bugs": {
+    "url": "https://github.com/caarbon/picu/issues"
+  },
+  "license": "ISC",
+  "keywords": ["node", "utils", "picu"]
 }

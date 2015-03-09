@@ -165,10 +165,10 @@ describe('String Utils module', function() {
 
   describe('.replace(template, replacements, pattern)', function() {
     it('should prepare a string correctly', function() {
-      var result = utils.replace('~name~ is a ~creature~. ~name~ likes ~food~.', {
+      var result = utils.replace('~name~ is a ~creature~. ~name~ likes ~food.stuff~.', {
         name: 'Benedict',
         creature: 'bear',
-        food: 'fish'
+        'food.stuff': 'fish'
       }, /~([^~]+)~/g);
 
       assert.equal(result, 'Benedict is a bear. Benedict likes fish.');
