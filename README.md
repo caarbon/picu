@@ -1,6 +1,6 @@
 # PICU [![Circle CI](https://circleci.com/gh/caarbon/picu.svg?style=svg)](https://circleci.com/gh/caarbon/picu)
 
-PICU is Caarbon's [Node] Utilities
+PICU is Carbon's [Node] Utilities
 
 Utilities will be added as they are needed.
 
