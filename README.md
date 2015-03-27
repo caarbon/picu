@@ -208,18 +208,18 @@ Converts a integer to a hex string
 numberUtils.intToHex(15769510); // -> #f09fa6
 ```
 
-### .between
+### .random
 
 Gives a random number between a min & max (inclusive) with an optional precision
 
 ```js
-numberUtils.between(33, 77); // -> 64
-numberUtils.between(33, 77); // -> 33
-numberUtils.between(33, 77); // -> 70
+numberUtils.random(33, 77); // -> 64
+numberUtils.random(33, 77); // -> 33
+numberUtils.random(33, 77); // -> 70
 
-numberUtils.between(77, 33); // -> 77
-numberUtils.between(77, 33); // -> 49
-numberUtils.between(77, 33); // -> 51
+numberUtils.random(77, 33); // -> 77
+numberUtils.random(77, 33); // -> 49
+numberUtils.random(77, 33); // -> 51
 
-numberUtils.between(1, 100, 4); // -> 12.8431
+numberUtils.random(1, 100, 4); // -> 12.8431
 ```

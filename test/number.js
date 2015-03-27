@@ -8,33 +8,33 @@ describe('Number Utils module', function() {
     });
   });
 
-  describe('.between(min, max)', function() {
+  describe('.random(min, max)', function() {
     it('should return a random number between a max & min', function() {
       var rando;
 
-      rando = utils.between(7, 9);
+      rando = utils.random(7, 9);
       assert.ok(rando >= 7 && rando <= 9, 'expecting a number between max & min');
       assert.equal(parseInt('' + rando, 10), rando, 'expecting whole number');
 
       // should compensate for numbers being swapped
-      rando = utils.between(42, 30);
+      rando = utils.random(42, 30);
       assert.ok(rando >= 30 && rando <= 42, 'expecting a number between max & min');
       assert.equal(parseInt('' + rando, 10), rando, 'expecting whole number');
     });
   });
 
-  describe('.between(min, max, precision', function() {
+  describe('.random(min, max, precision', function() {
     it('should return a random number between a max & min', function() {
       var rando;
       var remainderCheck = /^\d+\.?(\d*)$/, remainder;
 
-      rando = utils.between(7, 9, 3);
+      rando = utils.random(7, 9, 3);
       remainder = remainderCheck.exec('' + rando)[1];
       assert.ok(rando >= 7 && rando <= 9, 'expecting a number between max & min');
       assert.ok(remainder.length <= 3, 'expecting remainder with precision <= N');
 
       // should compensate for numbers being swapped
-      rando = utils.between(42, 30, 12);
+      rando = utils.random(42, 30, 12);
       remainder = remainderCheck.exec('' + rando)[1];
       assert.ok(rando >= 30 && rando <= 42, 'expecting a number between max & min');
       assert.ok(remainder.length <= 12, 'expecting remainder with precision <= N');
