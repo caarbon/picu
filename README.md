@@ -207,3 +207,19 @@ Converts a integer to a hex string
 ```js
 numberUtils.intToHex(15769510); // -> #f09fa6
 ```
+
+### .random
+
+Gives a random number between a min & max (inclusive) with an optional precision
+
+```js
+numberUtils.random(33, 77); // -> 64
+numberUtils.random(33, 77); // -> 33
+numberUtils.random(33, 77); // -> 70
+
+numberUtils.random(77, 33); // -> 77
+numberUtils.random(77, 33); // -> 49
+numberUtils.random(77, 33); // -> 51
+
+numberUtils.random(1, 100, 4); // -> 12.8431
+```
