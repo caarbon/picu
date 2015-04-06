@@ -2,7 +2,7 @@
   "name": "picu",
   "description": "PICU is Carbon's [Node] Utilities",
   "author": "Tim Marshall <timothyjmarshall@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./lib",
   "scripts": {
     "test": "grunt lint && mocha -R dot -t 20000 -b --recursive ./test"
