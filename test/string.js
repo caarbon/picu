@@ -161,17 +161,39 @@ describe('String Utils module', function() {
       assert.equal(funcCallResult1, 'Gray is Tim\'s favorite color');
       assert.equal(funcCallResult2, 'Orange is Jess\' favorite color');
     });
+
+    it('should allow dot notation', function() {
+      var result = utils.replace('{{person.name}} is {{person.age}} years old', {
+        person: {
+          name: 'Carby',
+          age: 25
+        }
+      });
+
+      assert.equal(result, 'Carby is 25 years old');
+    });
   });
 
   describe('.replace(template, replacements, pattern)', function() {
     it('should prepare a string correctly', function() {
-      var result = utils.replace('~name~ is a ~creature~. ~name~ likes ~food.stuff~.', {
+      var result = utils.replace('~name~ is a ~creature~. ~name~ likes ~food~.', {
         name: 'Benedict',
         creature: 'bear',
-        'food.stuff': 'fish'
+        food: 'fish'
       }, /~([^~]+)~/g);
 
       assert.equal(result, 'Benedict is a bear. Benedict likes fish.');
+    });
+
+    it('should allow dot notation', function() {
+      var result = utils.replace('~person.name~ is ~person.age~ years old', {
+        person: {
+          name: 'Carby',
+          age: 25
+        }
+      }, /~([^~]+)~/g);
+
+      assert.equal(result, 'Carby is 25 years old');
     });
   });
 
