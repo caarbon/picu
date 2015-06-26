@@ -1,5 +1,5 @@
 {
-  "excludeFiles": [ "node_modules/**", "ignore/**", "handshaker/public/scripts/**" ],
+  "excludeFiles": [ "node_modules/**", "ignore/**" ],
   "disallowTrailingWhitespace": true,
   "requireLineFeedAtFileEnd": true,
   "disallowEmptyBlocks": true,
@@ -30,7 +30,6 @@
     "afterConsequent": true,
     "beforeAlternate": true
   },
-  // "requireSpaceBeforeKeywords": [ "else", "catch", "finally", "while" ], // not a valid attribute, it seems :/
   "requireSpaceAfterKeywords": [ "do", "for", "if", "else", "try", "finally", "while", "void", "return", "typeof" ],
   "requireSpaceBeforeBlockStatements": true,
   "requireSpacesInFunctionExpression": {
