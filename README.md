@@ -223,3 +223,13 @@ numberUtils.random(77, 33); // -> 51
 
 numberUtils.random(1, 100, 4); // -> 12.8431
 ```
+
+## Objects
+
+```js
+var objectUtils = require('picu').object;
+```
+
+### .extend
+
+
