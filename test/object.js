@@ -1,5 +1,5 @@
 var assert = require('assert');
-var utils = require('../').number;
+var utils = require('../').object;
 
 describe('Object Utils module', function() {
   describe('.extend(affected, obj)', function() {
