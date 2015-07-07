@@ -223,3 +223,19 @@ numberUtils.random(77, 33); // -> 51
 
 numberUtils.random(1, 100, 4); // -> 12.8431
 ```
+
+## Objects
+
+```js
+var objectUtils = require('picu').object;
+```
+
+### .extend
+
+Given an object, update or add keys on another (deeply)
+
+```js
+var result = objectUtils.extend({ a: 12, b: 35 }, { b: 99, z: 404 });
+// result = { a: 12, b: 99, z: 404 };
+// first object is modified
+```
