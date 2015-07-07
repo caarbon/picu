@@ -232,4 +232,10 @@ var objectUtils = require('picu').object;
 
 ### .extend
 
+Given an object, update or add keys on another (deeply)
 
+```js
+var result = objectUtils.extend({ a: 12, b: 35 }, { b: 99, z: 404 });
+// result = { a: 12, b: 99, z: 404 };
+// first object is modified
+```
